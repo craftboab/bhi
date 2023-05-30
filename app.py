@@ -9,7 +9,7 @@ from langchain.schema import (
     SystemMessage,
     HumanMessage,
 )
-# import openai
+import openai
 
 # import os 
 # openai.api_key = st.secrets.OpenAIAPI.openai_api_key
