@@ -9,10 +9,10 @@ from langchain.schema import (
     SystemMessage,
     HumanMessage,
 )
-import openai
+# import openai
 
-import os 
-openai.api_key = st.secrets.OpenAIAPI.openai_api_key
+# import os 
+# openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 openai_api_key = st.secrets.OpenAIAPI.openai_api_key
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
@@ -31,7 +31,7 @@ text_splitter = CharacterTextSplitter(
 # Create the vector index
 index = VectorstoreIndexCreator(
     vectorstore_cls=Chroma,
-    embedding=OpenAIEmbeddings(),
+    embedding=OpenAIEmbeddings(openai_api_key=openai_api_key),
     text_splitter=text_splitter,
 ).from_loaders([loader])
 
