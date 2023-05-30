@@ -11,6 +11,8 @@ from langchain.schema import (
     HumanMessage,
 )
 
+load_dotenv()
+
 # Load the document
 loader = TextLoader("./test.txt", encoding="utf8")
 
