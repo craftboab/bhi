@@ -13,7 +13,7 @@ from langchain.schema import (
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 # openai.api_key = st.secrets.OpenAIAPI.openai_api_key
-OPENAI_API_KEY = st.secrets.OpenAIPAI.openai_api_key
+OPENAI_API_KEY = st.secrets.OpenAIAPI.openai_api_key
 
 # Load the document
 loader = TextLoader("./test.txt", encoding="utf8")
