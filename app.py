@@ -11,7 +11,7 @@ from langchain.schema import (
 )
 
 import os 
-openai_api_key = st.secrets.OpeanAIAPI.openai_api_key
+openai_api_key = st.secrets.OpenAIAPI.openai_api_key
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 # openai.api_key = st.secrets.OpenAIAPI.openai_api_key
