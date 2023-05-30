@@ -1,5 +1,4 @@
 import streamlit as st
-from dotenv import load_dotenv
 from langchain.document_loaders import TextLoader
 from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -11,7 +10,9 @@ from langchain.schema import (
     HumanMessage,
 )
 
-load_dotenv()
+# Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
+openai.api_key = st.secrets.OpenAIAPI.openai_api_key
+
 
 # Load the document
 loader = TextLoader("./test.txt", encoding="utf8")
